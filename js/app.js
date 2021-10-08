@@ -13,7 +13,6 @@ window.addEventListener('scroll', (e) => {
         nav.classList.remove('active-nav')
     }
 })
-
 // move to section
 const links = document.querySelectorAll('.link-itme');
 links.forEach(link=>{
@@ -22,7 +21,15 @@ links.forEach(link=>{
         // @ts-ignore
         const className = e.target.getAttribute('href');
         const sectionClass = document.querySelector(`.${className}`)
-        sectionClass.scrollIntoView();
+        // @ts-ignore
+        let postion = sectionClass.offsetTop  - navHeight
+        window.scrollTo({
+            left:0,
+            top: postion
+        })
+        if(linkMenu.classList.contains('open') == true){
+            linkMenu.classList.remove('open')
+        }
     })
 })
 
@@ -43,3 +50,14 @@ btnTop.addEventListener('click', ()=>{
         top:0
     })
 }) 
+
+// responsive
+const menu = document.querySelector('.menu');
+const linkMenu = document.querySelector('.links');
+const closeBtn = document.querySelector('.close');
+menu.addEventListener('click', () => {
+    linkMenu.classList.add('open')
+})
+closeBtn.addEventListener('click', ()=>{
+    linkMenu.classList.remove('open')
+})

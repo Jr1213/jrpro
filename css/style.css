@@ -89,6 +89,20 @@ html {
           transform: scale(1.1);
 }
 
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  .text {
+    font-size: 1.8rem;
+  }
+  .btn {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+  }
+}
+
 nav {
   -webkit-transition: ease-in-out all 250;
   transition: ease-in-out all 250;
@@ -141,6 +155,14 @@ nav .container .links li a {
 
 nav .container .links li a:hover {
   color: #EF233c;
+}
+
+nav .container .links .close {
+  display: none;
+}
+
+nav .container .menu {
+  display: none;
 }
 
 .active-nav {
@@ -345,5 +367,112 @@ footer {
 
 .gotop.active-btn {
   visibility: visible;
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+  nav .container .menu {
+    display: block;
+    margin: 1rem 0;
+  }
+  nav .container .menu i {
+    font-size: 3rem;
+    color: #EF233c;
+  }
+  nav .container .links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #051821;
+    -webkit-transition: all ease-in-out 250ms;
+    transition: all ease-in-out 250ms;
+  }
+  nav .container .links li {
+    margin: 1rem 0;
+  }
+  nav .container .links li .link-itme {
+    font-size: 2rem;
+  }
+  nav .container .links .close {
+    display: block;
+    position: absolute;
+    top: 5vh;
+    left: 8vw;
+    color: #F6F6F6;
+    font-size: 2rem;
+  }
+  nav .container .links.open {
+    left: 0;
+  }
+  .header .container {
+    text-align: center;
+  }
+  .header .container .header-title {
+    font-size: 4rem;
+  }
+  .header .container .sub-title {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+  .skills .container .center {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .skills .container .center .skill-container .skill-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .skills .container .center .skill-container .skill-tree li {
+    font-size: 2rem;
+  }
+  .projects {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    padding-bottom: 2rem;
+  }
+  .projects .container {
+    text-align: center;
+  }
+  .projects .container .projects-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projects .container .projects-list .project {
+    width: 100%;
+  }
+  .projects .container .projects-list .project .project-links .project-title {
+    font-size: 2rem;
+  }
+  .projects .container .projects-list .project .project-links .btn {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  .contact .container .btn {
+    -webkit-transform: scaleX(0.6);
+            transform: scaleX(0.6);
+  }
 }
 /*# sourceMappingURL=style.css.map */
