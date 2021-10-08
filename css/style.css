@@ -6,6 +6,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   margin: 0 auto;
   max-width: 80%;
@@ -83,6 +87,64 @@
 .btn-red:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+nav {
+  -webkit-transition: ease-in-out all 250;
+  transition: ease-in-out all 250;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .container .logo {
+  margin: 1rem 0;
+  letter-spacing: 4px;
+  color: #F6F6F6;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+nav .container .logo span {
+  color: #EF233c;
+}
+
+nav .container .links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 1.5rem;
+}
+
+nav .container .links li a {
+  text-decoration: none;
+  color: #F6F6F6;
+  display: block;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+nav .container .links li a:hover {
+  color: #EF233c;
+}
+
+.active-nav {
+  background-color: #051821;
 }
 
 .section {
@@ -192,6 +254,7 @@
 }
 
 .projects .container .projects-list .project .project-image img {
+  display: block;
   width: 100%;
 }
 
@@ -263,5 +326,24 @@ footer {
   color: #FFFFFF;
   font-size: 1.2rem;
   letter-spacing: 4px;
+}
+
+.gotop {
+  visibility: hidden;
+  position: fixed;
+  bottom: 5vh;
+  right: 5vw;
+  background-color: #EF233c;
+  cursor: pointer;
+}
+
+.gotop i {
+  font-size: 2rem;
+  padding: .75rem;
+  color: #F6F6F6;
+}
+
+.gotop.active-btn {
+  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,49 @@
 @import './_colors';
 @import './general';
 
+// styling navbar
+nav{
+    transition: ease-in-out all 250;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            margin: 1rem 0;
+            letter-spacing: 4px;
+            color: $ligth-white;
+            font-size: 2rem;
+            font-weight: 600;
+            span{
+                color: $red-color;
+            }
+        }
+        .links{
+            
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0 1.5rem ;
+            li a  {
+                text-decoration: none;
+                color: $ligth-white;
+                display: block;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                &:hover{
+                    color: $red-color;
+                }
+            }
+        }
+    }
+}
+.active-nav{
+    background-color: $light-black ;
+}
 // styling header
 .section {
     height: 100vh;
@@ -102,11 +145,11 @@
                 overflow: hidden;
                 position: relative;
                 width: 30%;
-
                 .project-image {
                     width: 100%;
 
                     img {
+                        display: block;
                         width: 100%;
                     }
                 }
@@ -179,4 +222,22 @@ footer{
     color: $white--color;
     font-size: 1.2rem;
     letter-spacing: 4px;
+}
+
+// go top button
+.gotop{
+    visibility: hidden;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    background-color: $red-color;
+    cursor: pointer;
+    i{
+        font-size: 2rem;
+        padding: .75rem;
+        color: $ligth-white;
+    }
+}
+.gotop.active-btn{
+    visibility: visible;
 }

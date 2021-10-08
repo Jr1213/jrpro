@@ -5,7 +5,9 @@
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .container{
     margin: 0 auto;
     max-width: 80%;
