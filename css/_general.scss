@@ -1,0 +1,65 @@
+@import './_colors';
+*{
+    box-sizing: content-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 80%;
+}
+//long text styling
+.text {
+    color: rgb(139, 139, 139);
+}
+// horzinyal felx class
+.flex-center-h {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+// vertical flex calss
+.flex-center-v {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+// titles styling
+.title{
+    letter-spacing: 2px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+// margin button 1rem
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+// buttons
+.btn {
+    text-decoration: none;
+    display: block;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all ease-in-out 250ms;
+    border-radius: 50px;
+}
+
+.btn-red {
+    background-color: $red-color;
+    width: fit-content;
+    padding: 10px 30px;
+    color: $ligth-white;
+    border: 2px solid transparent;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
